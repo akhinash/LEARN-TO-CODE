@@ -1,0 +1,26 @@
+div{
+    height: 200px;
+    width: 170px;
+
+}
+#a{
+    background-color: black;
+    margin-left: 200px;
+    margin-top: 200px;
+
+}
+#b{
+    background-color: darkgrey;
+    margin-left: 400px;
+    margin-top: -200px;
+}
+#c{
+    background-color: navy;
+    margin-left: 600px;
+    margin-top: -200px;
+}
+#d{
+    background-color: rgb(183,28,28);
+    margin-left: 800px;
+    margin-top: -200px;
+}
