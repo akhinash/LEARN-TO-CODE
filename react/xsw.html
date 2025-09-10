@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function squarePattern(n) {
+  for (let i = 1; i <= n; i++) {
+    let row = "";
+    for (let j = 1; j <= n; j++) {
+      if (i === 1) row += j + " ";               // top row
+      else if (i === n) row += (n - j + 1) + " "; // bottom row
+      else if (j === 1) row += i + " ";           // left column
+      else if (j === n) row += (n - i + 1) + " "; // right column
+      else row += "  ";                           // inside space
+    }
+    console.log(row.trim());
+  }
+}
+
+// Test
+squarePattern(4);
+squarePattern(5);
+squarePattern(6);
+    </script>
+</body>
+</html>

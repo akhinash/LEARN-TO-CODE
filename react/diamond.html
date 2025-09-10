@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>document</title>
+</head>
+
+<body>
+    <div id="print"></div>
+
+    <script>
+        let rows = 5;
+        let output = "";
+        for (let i = 1; i <= rows; i++) {
+            let pattern = "";
+            for (let j = i; j < rows; j++) {
+                pattern += "&nbsp&nbsp;";
+            }
+            for (let j = 1; j <= 2 * i - 1; j++) {
+                pattern += "*";
+            }
+
+            output += pattern + "<br>";
+        }
+        for (let i = rows - 1; i >= 1; i--) {
+            let pattern = "";
+            for (let j = i; j < rows; j++) {
+                pattern += "&nbsp&nbsp;";
+            }
+            for (let j = 1; j <= 2 * i - 1; j++) {
+                pattern += "*";
+            }
+
+            output += pattern + "<br>";
+        }
+
+        document.getElementById("print").innerHTML = output;
+    </script>
+</body>
+
+</html>
