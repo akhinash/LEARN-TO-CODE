@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Cart</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+        }
+
+        .product, .cart-item {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        button {
+            margin-left: 10px;
+        }
+
+        h2 {
+            margin-top: 30px;
+        }
+
+        .total {
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        .products img{
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Products</h2>
+    <div id="products"></div>
+
+    <h2>Cart</h2>
+    <div id="cart"></div>
+    <div class="total" id="total">Total: ₹0</div>
+
+    <script>
+        const products = [
+            { id: 1, name: "Apple", price: 30, Image:"https://cdn-icons-png.flaticon.com/512/415/415682.png" },
+            { id: 2, name: "Banana", price: 10 ,Image:"https://cdn-icons-png.flaticon.com/512/590/590685.png"},
+            { id: 3, name: "Orange", price: 20 ,Image:"https://cdn-icons-png.flaticon.com/512/590/590685.png" }
+        ];
+
+        const cart = [];
+
+        const productsDiv = document.getElementById("products");
+        const cartDiv = document.getElementById("cart");
+        const totalDiv = document.getElementById("total");
+
+        // Show products
+        products.forEach(p => {
+            const div = document.createElement("div");
+            div.className = "product";
+            div.innerHTML = `${p.name} - ₹${p.price}
+                <button onclick="addToCart(${p.id})">Add</button>`;
+            productsDiv.appendChild(div);
+        });
+
+        function addToCart(id) {
+            const product = products.find(p => p.id === id);
+            cart.push(product);
+            showCart();
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            showCart();
+        }
+
+        function showCart() {
+            cartDiv.innerHTML = "";
+            let total = 0;
+
+            cart.forEach((item, index) => {
+                const div = document.createElement("div");
+                div.className = "cart-item";
+                div.innerHTML = ` ${item.name} - ₹${item.price}
+                    <button onclick="removeFromCart(${index})">Remove</button>`;
+                cartDiv.appendChild(div);
+                total += item.price;
+            });
+
+            totalDiv.textContent = ` Total: ₹${total}`;
+        }
+    </script>
+</body>
+</html>

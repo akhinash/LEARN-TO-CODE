@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h2>To-do List</h2>
+    <input type="text" name="" id="taskInput" placeholder="enter a task">
+    <button onclick="addTask()">add task</button>
+
+    <ul id="taskList"></ul>
+
+    <script>
+        function addTask() {
+            var input = document.getElementById("taskInput")
+            var task = input.value.trim()
+
+            if (task === "") {
+                alert("please enter a task")
+            }
+        }
+
+        var li = document.createElement("li")
+            li.textContent = task
+
+            document.getElementById("taskList").appendChild(li)
+
+            li.onclick = function () {
+                li.classList.toggle("completed")
+            }
+
+            var btn = document.createElement("button")
+            btn.textContent = "delete"
+            btn.className = "delete-btn"
+            btn.onclick = function () {
+                li.remove()
+            }
+            li.appendChild(btn)
+
+            input.value = ""
+
+             
+        document.addEventListener('keydown', function (event) {
+            const key = event.key;
+            if (key === "Enter") {
+                event.preventDefault();
+                addTask()
+            }
+
+        })
+
+
+
+
+            
+
+        
+
+    </script>
+
+    
+</body>
+</html>

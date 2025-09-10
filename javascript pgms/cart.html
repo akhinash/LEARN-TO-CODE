@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            margin-top:20px;
+        }
+        .product,.cart{
+            align-items: center;
+            padding: 20px;
+            border-radius: 5px;
+            display: flex;
+            background-color: lightgray;
+            margin: 10px;
+
+        }
+
+        
+        
+    </style>
+
+</head>
+
+<body>
+
+    <h2>Products</h2>
+    <div class="product" id="productList">
+
+    </div>
+
+    <h2>Cart</h2>
+    <div class="cart" id="cartItems"></div>
+
+    <div class="Total" id="totalPrice"> total:0</div>
+
+    <script>
+        const products = [
+            { id: 1, name: "APPLE", price: 30 },
+            { id: 2, name: "BANANA", price: 10 },
+            { id: 3, name: "ORANGE", price: 20 }
+
+        ]
+
+        const cart = [];
+        const productList = document.getElementById("productList");
+        const cartItems = document.getElementById("cartItems");
+        const totalPrice = document.getElementById("totalPrice");
+
+        products.forEach(p => {
+            const div = document.createElement("div");
+            div.className = "product1";
+            div.innerHTML = `${p.name} - ${p.price}
+            <button onclick="addToCart(${p.id})">Add</button>`
+            productsDiv.appendChild(div);
+        });
+
+        function addToCart(id) {
+            const product = product.find(p => p.id ===id)
+            cart.push(product)
+            showCart()
+        }
+
+        function removeFromCart(index){
+            cart.splice(index,1)
+            showCart()
+        }
+
+        function showCart(){
+            caetDiv.innerHtml = ""
+            let total=0
+
+            cart.forEach((item,index) => {
+                const div = document.createElement("div")
+                div.className = "cart-item"
+                div.innerHTML=`${item.name}-${item.price}
+                <button onclick="removeFromCart(${index})">Remove</button>`
+                cartDiv.appendChild(div)
+                total+=item.price;
+            })
+
+            totalDiv.textContent = `Total: ${total}`
+        }
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

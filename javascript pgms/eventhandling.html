@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- /*<button onclick="clickMe()">click me</button>
+
+    <button ondblclick="dClick()" >double click me</button>
+
+    <button onmouseover="mOver()">hover me</button>
+
+    <button id="btn1">mouseout</button>
+    
+
+    <script>
+        function clickMe(){
+            console.log("you clicked me")
+        }
+        function dClick(){
+            console.log("you DOUBLE clicked me")
+        }
+        function mOver(){
+            console.log("you over me")
+        }
+
+        const btn = document.getElementById("btn1")
+        btn.onmouseout=function(){
+        alert("mouse out")
+        }
+    </script>*/
+     -->
+    <button onclick="changeColor()" style="display: block; margin: auto;">Click Me</button>
+
+    <script>
+        function changeColor() {
+            if (document.body.style.backgroundImage="url('ab.jpg')") {
+                document.body.style.backgroundColor = "white";
+            } else {
+                document.body.style.backgroundImage="url('bd.jpg')"
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

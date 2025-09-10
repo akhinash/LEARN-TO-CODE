@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+
+            
+
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 100px;
+        }
+
+        div {
+            background-color: white;
+            padding: 20px;
+            padding-top: 50px;
+            border-radius: 15px;
+            box-shadow: 2px black;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            background-color: brown;
+            width:280px
+
+
+
+        }
+
+        .button {
+            display: grid;
+            grid-template-columns: repeat(4, 60px);
+            grid-gap: 10px;
+            justify-content: center;
+        }
+        button{
+            height: 50px;
+            width: 50px;
+            font-size: 20px;
+            background-color: lightgrey;
+            border: none;
+            border-radius: 5px;
+
+        }
+        input{width: 260px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            border: none;
+            
+
+        }
+        button.clear{
+            width: 260px;
+            background-color: gray;
+            color: beige;
+        }
+        button.equal{
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="display" id="display">
+        <div class="button">
+            <button onclick="addTodisplay('7')">7</button>
+            <button onclick="addTodisplay('8')">8</button>
+            <button onclick="addTodisplay('9')">9</button>
+            <button onclick="addTodisplay('/')">/</button>
+
+            <button onclick="addTodisplay('4')">4</button>
+            <button onclick="addTodisplay('5')">5</button>
+            <button onclick="addTodisplay('6')">6</button>
+            <button onclick="addTodisplay('*')">*</button>
+
+            <button onclick="addTodisplay('3')">3</button>
+            <button onclick="addTodisplay('2')">2</button>
+            <button onclick="addTodisplay('1')">1</button>
+            <button onclick="addTodisplay('-')">-</button>
+
+            <button onclick="addTodisplay('0')">0</button>
+            <button onclick="addTodisplay('.')">.</button>
+            <button class="equal" onclick="calculateResult('=')">=</button>
+            <button onclick="addTodisplay('+')">+</button>
+
+            <button class="clear" onclick="clearDisplay()">Clear</button>
+
+
+
+        </div>
+    </div>
+
+
+    <script>
+        var displayValue=""
+        var resultShown=false
+
+        function addTodisplay(value){
+            if(resultShown){
+                displayValue=""
+                resultShown=false;
+            }
+            displayValue += value;
+            document.getElementById("display").value = displayValue
+        }
+
+        function calculateResult()
+        {
+            try{
+                var result=eval(displayValue)
+                document.getElementById("display").value=result
+
+                resultShown=true
+                
+                
+            }
+            catch{
+                document.getElementById("display").value="error"
+                displayValue=""
+            }
+        }
+
+        function clearDisplay(){
+            displayValue=""
+            resultShown=false
+            document.getElementById("display").value=""
+            
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

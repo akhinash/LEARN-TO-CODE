@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //qn1
+        const cities =["Delhi","Mumbai","Chennai"]
+        console.log(cities)
+        cities.push("Kolkata")
+        console.log(cities)
+        cities.shift()
+        console.log(cities)
+        cities.splice(0,0,"Bangalore","Hyderabad")
+        console.log(cities)
+        cities.pop()
+        console.log(cities)
+        cities.splice(2,0,"pune")
+        console.log(cities)
+        cities.splice(1,1)
+        console.log(cities)
+
+        //qn2
+        let books = ["math","science","history","english"]
+        books.push("computer")
+        console.log(books)
+        books.shift()
+        console.log(books)
+        books.unshift("physics")
+        console.log(books)
+        books.pop()
+        console.log(books)
+        books.splice(2,0,"biology","chemistry")
+        console.log(books)
+        books.splice(1,2)
+        console.log(books)
+
+        //QN3
+
+        const array1 = [1,2,3]
+        const array2 = [4,5,6]
+        const combine = array1.concat(array2)
+        console.log(combine)
+
+        const comb =[...array1, ...array2]
+        console.log(comb)
+
+        //qn4
+
+        let morningbatch =["alice","bob","charlie"];
+        let eveningbatch = ["david","eva","frank"];
+        let waitinglist =["george","hannah"];
+
+
+        const allstudents=[...morningbatch,...eveningbatch]
+        console.log(allstudents)
+
+        const a1=[allstudents.concat(waitinglist)]
+        console.log(a1)
+        
+
+
+    </script>
+    
+</body>
+</html>

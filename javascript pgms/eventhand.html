@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+<body style="background-color: white;">
+  <button id="clk">Click</button>
+
+  <script>
+    let clcks = document.getElementById("clk");
+
+    clcks.onclick = function clickMe() {
+      if (document.body.style.backgroundImage.includes("url")) {
+        document.body.style.backgroundImage = "none";
+        document.body.style.backgroundColor = "white";
+      } else {
+        document.body.style.backgroundImage = "url('bd.jpg')";
+        document.body.style.backgroundRepeat = "no-repeat";
+        document.body.style.backgroundSize = "cover";
+      }
+    };
+  </script>
+</body>
+</html>
+

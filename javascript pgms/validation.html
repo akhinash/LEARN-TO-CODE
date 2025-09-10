@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: grey;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        div {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        input {
+           width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            border: none;
+            width: 40%;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <form action="" id="myform">
+            <h2>Register</h2>
+            <input type="text" name="" id="name" placeholder="name">
+            <div class="error" id="nameError"></div>
+            <br><br>
+            <input type="email" name="" id="email" placeholder="email">
+            <div class="error" id="emailError"></div>
+            <br><br>
+            <input type="password" name="" id="password" placeholder="password">
+            <div class="error" id="passwordError"></div>
+            <br><br>
+            <input type="password" name="" id="confirmPassword" placeholder="confirm password">
+            <div class="error" id="confirmPasswordError"></div>
+            <br><br>
+            <button type="submit">SUBMIT</button>
+
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById("myform")
+
+        form.addEventListener("submit",function(e){
+            e.preventDefault()
+
+            const name = document.getElementById("name").value.trim()
+            const email = document.getElementById("email").value.trim()
+            const password = document.getElementById("password").value
+            const confirmPassword = document.getElementById("confirmPassword").value
+
+            document.getElementById("nameError").textContent = ""
+            document.getElementById("emailError").textContent = ""
+            document.
+
+        }
+        )
+    </script>
+</body>
+
+</html>
