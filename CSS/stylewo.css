@@ -1,0 +1,25 @@
+p::first-letter{
+    color: blue;
+}
+/* p::after{
+    content: "kkkkk";
+}
+p::before{
+    content:"sdhshjd"; */
+/* } */
+p::selection{
+    background-color: aquamarine;
+}
+.fir-div p{
+    color: green;
+}
+.fir-div>p{
+    color: blueviolet;
+
+}
+h1+h3{
+    color: brown;
+}
+h1~h2{
+    color: yellow;
+}

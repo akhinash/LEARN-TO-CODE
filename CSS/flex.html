@@ -6,78 +6,49 @@
     <title>Document</title>
     <style>
         .container{
-            background-color: cadetblue;
-            
+            padding: 20px;
+            border: 2px solid green;
             display: flex;
             flex-direction: row;
-            flex-wrap: wrap;
+            width: 700px;
+            height: 500px;
+           /* flex-wrap: wrap;
+            justify-content: center;
+            justify-content: space-between;*/
+            align-items: baseline;
+            gap: 27px;
         }
-        .a{
-            background-color: chocolate;
+        .item{
+            border: 2px solid;
+            padding: 12px;
             height: 50px;
-            width: 50px;
-            padding: 10px;
-            margin: 10px;
-            font-size: 20px;
+        }
+        .item-1{
+            flex-basis: 300px;
+            order: 4;
+            flex-shrink: 2;
+        }
+        .item-3{
+            align-self: center;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="a">1</div>
-        <div class="a">2</div>
-        <div class="a">3</div>
-        <div class="a">4</div>
-        <div class="a">5</div>
-        <div class="a">6</div>
-
-        <div class="a">1</div>
-        <div class="a">2</div>
-        <div class="a">3</div>
-        <div class="a">4</div>
-        <div class="a">5</div>
-        <div class="a">6</div>
-
-        <div class="a">1</div>
-        <div class="a">2</div>
-        <div class="a">3</div>
-        <div class="a">4</div>
-        <div class="a">5</div>
-        <div class="a">6</div>
-
-        <div class="a">1</div>
-        <div class="a">2</div>
-        <div class="a">3</div>
-        <div class="a">4</div>
-        <div class="a">5</div>
-        <div class="a">6</div>
-
-        <div class="a">1</div>
-        <div class="a">2</div>
-        <div class="a">3</div>
-        <div class="a">4</div>
-        <div class="a">5</div>
-        <div class="a">6</div>
-        <div class="a">1</div>
-        <div class="a">2</div>
-        <div class="a">3</div>
-        <div class="a">4</div>
-        <div class="a">5</div>
-        <div class="a">6</div>
-        <div class="a">1</div>
-        <div class="a">2</div>
-        <div class="a">3</div>
-        <div class="a">4</div>
-        <div class="a">5</div>
-        <div class="a">6</div>
-
-        <div class="a">1</div>
-        <div class="a">2</div>
-        <div class="a">3</div>
-        <div class="a">4</div>
-        <div class="a">5</div>
-        <div class="a">6</div>
-
+        <div class="item item-1" >itme1</div>
+        <div class="item" >item2</div>
+        <div class="item item-3" >item3</div>
+         <div class="item" >itme4</div>
+        <!-- <div class="item" >item2</div>
+        <div class="item" >item3</div> <div class="item" >itme1</div>
+        <div class="item" >item2</div>
+        <div class="item" >item3</div> <div class="item" >itme1</div>
+        <div class="item" >item2</div>
+        <div class="item" >item3</div> <div class="item" >itme1</div>
+        <div class="item" >item2</div>
+        <div class="item" >item3</div> <div class="item" >itme1</div>
+        <div class="item" >item2</div>
+        <div class="item" >item3</div> -->
     </div>
 </body>
 </html>

@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background: radial-gradient(circle at top left, #2d2d78, #0e0c30);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.form-container {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 20px;
+  width: 400px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 30px rgba(0,0,0,0.3);
+}
+
+.registration-form h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 0.3rem;
+}
+
+.registration-form p {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.registration-form label {
+  display: block;
+  margin: 1rem 0 0.3rem;
+  font-weight: bold;
+}
+
+.registration-form input,
+.registration-form select {
+  width: 100%;
+  padding: 0.6rem;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  background: transparent;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+}
+
+.registration-form select {
+  background: transparent;
+  color: #fff;
+  appearance: none;
+}
+
+.name-fields {
+  display: flex;
+  gap: 1rem;
+}
+
+.name-fields input {
+  flex: 1;
+}
+
+button {
+  margin-top: 2rem;
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 25px;
+  background: #e91e63;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #c2185b;
+}

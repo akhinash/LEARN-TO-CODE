@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DOCUMENT</title>
+  <link rel="stylesheet" href="style6.css" />
+</head>
+<body>
+  <div class="form-container">
+    <form class="registration-form">
+      <h2>Event Registration</h2>
+      <p>Register with us to get more details.</p>
+
+      <label>Name</label>
+      <div class="name-fields">
+        <input type="text" placeholder="First" id="fname" />
+        <input type="text" placeholder="Last" id="lname" />
+      </div>
+
+      <label>Email</label>
+      <input type="email" placeholder="Email" required />
+
+      <label>Phone</label>
+      <input type="tel" placeholder="Phone Number" required />
+
+      <label>Topic</label>
+      <select required>
+        <option value="">Select a topic</option>
+        <option value="ai">Artificial Intelligence</option>
+        <option value="web">Web Development</option>
+        <option value="cloud">Cloud Computing</option>
+      </select>
+
+      <label>Preferred Slot</label>
+      <select required>
+        <option value="">Select a slot</option>
+        <option value="morning">Morning</option>
+        <option value="afternoon">Afternoon</option>
+        <option value="evening">Evening</option>
+      </select>
+
+      <button type="submit">Sign me up</button>
+    </form>
+  </div>
+</body>
+</html>

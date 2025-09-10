@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>*{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        
+    }
+    .container {
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(backgro.jpg);
+  padding: 100px;
+  
+  background-size:100%
+}
+.bod{
+     background: white;
+  padding: 40px;
+  border-radius: 12px;
+  width: 300px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 30%;
+
+  
+}
+h2{
+    text-align: center;
+}
+    
+label{color: grey;
+font-size: large;}
+
+input,text{
+   
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  background: transparent;
+  font-size: 15px;
+  outline: none;
+  text-align: left;
+  justify-content: left;
+  color: gray;
+  
+}
+button{
+       background: linear-gradient(to left, violet,blue);
+    border-radius: 20px;
+    color: antiquewhite;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    box-shadow: 10%;
+}
+.login{
+    text-align: center;
+    color: gray;
+    padding: 40px;
+}
+.signup{
+    text-align: center;
+    color:gray;
+    padding: 40px;
+
+}
+signup,a {
+    color: gray;
+    text-decoration: none;
+    font-size:small;
+}
+.forgot{
+    text-align: right;
+}
+.hea{
+    text-align: center;
+}
+
+    
+    
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="bod">
+        <form action="">
+           <div class="hea"> <h1>Login</h1></div>
+            <br><br>
+            <div class="input">
+            <label for="">Username</label><br><br>
+            <i class="fa-solid fa-user"></i>
+            <input type="text" name="" id="" placeholder="type your username">
+            </div>
+            <br><br>
+            <div class="input">
+            <label for="">Password</label><br><br>
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" name="" id="" placeholder="enter your password">
+            </div>
+            <div class="forgot"><a href="">forgot password</a></div>
+            <br><br>
+            <button>LOGIN</button>
+            <div class="login">
+        <p>Or Sign Up Using</p>
+        <br>
+        <div class="icons">
+          <i class="fa-brands fa-facebook"></i>
+          
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-google"></i>
+        </div>
+      </div>
+      
+      <div class="signup">
+        <p>Or Sign Up Using</p>
+        <a href="#">SIGN UP</a>
+      </div>
+
+        </form>
+    </div>
+    </div>
+    
+</body>
+</html>

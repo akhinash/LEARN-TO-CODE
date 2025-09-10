@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a,.b,.d,.e{
+            width: 110px;
+            height: 110px;
+            background-color: plum;
+            border-radius: 50%;
+
+        }
+        .f{
+            width: 110px;
+            height: 110px;
+            background-color: plum;
+        }
+        .c{
+            width: 110px;
+            height: 110px;
+            background-color: plum;
+        }
+        .container{
+            display: flex;
+            gap: 20px;
+        }
+        .a:hover{
+            transform: translateX(100px);
+        }
+        .f:hover{
+            transform:rotateX(180deg);
+            transition: 3s ease;
+        }
+        .b:hover{
+            transform: scale(1.2);
+            transition: 2s;
+        }
+        .c:hover{
+            transform: skew(100deg);
+        }
+        .abc{
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            border: none;
+            position: relative;
+            background-color: red;
+            animation: bounce 3s infinite;
+        }
+        @keyframes bounce {
+            0%{
+                left:0;
+
+            }
+            20%{
+                left: 150px;
+            }
+            40%{
+                left: 300px;
+                top: 50px;
+            }
+            75%{
+                left:150px;
+            }
+            100%{
+                left: 0;
+            }
+        }
+        .def{
+             height: 100px;
+            width: 100px;
+            border-radius: 10px;
+            border: none;
+            position: relative;
+            background-color:blue;
+            animation: drag 3s infinite;
+            padding: 25px;
+            text-align: center;
+            color: white;
+            font-size: large;
+            animation: drag 3s infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        @keyframes drag{
+            0%{
+                left:0;
+            }
+            100%{
+                left:400px;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    <div class="a"></div><br>
+    <div class="b"></div><br>
+    <div class="c"></div><br>
+    <div class="d"></div><br>
+    <div class="e"></div><br>
+    <div class="f"></div><br>
+    </div>
+<br><br>
+    <div class="abc">
+
+    </div>
+    <br><br><br>
+    <div class="def">
+        HELLO!
+    </div>
+
+</body>
+
+</html>

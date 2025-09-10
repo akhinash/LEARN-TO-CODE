@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --mycolor:#406B58;
+        }
+        body{
+            background-color: var(--mycolor);
+        }
+        .sqr{
+            background-color: wheat;
+            height: 200px;
+            width: 200px;
+            
+            
+        }
+        .sqr1{
+            background-color: darkslategray;
+            height: 200px;
+            width: 200px;
+        }
+        .sqr:hover{
+            border-radius: 50%;
+            transition: 2s ease-out;
+        }
+        .sqr1:hover{
+            border-radius: 25%;
+            transition: 1s ease;
+        }
+        button{
+            background-color: crimson;
+            color: beige;
+            border-radius: 10px;
+            border: none;
+            padding: 10px;
+        }
+        button:hover{
+            background-color: cadetblue;
+            transition: 2s ease;
+            font-size: 50px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="sqr"></div>
+    <br>
+    <div class="sqr1"></div>
+    <h1>Transition</h1>
+    <button>JUST HOVER ME</button>
+    
+</body>
+</html>
