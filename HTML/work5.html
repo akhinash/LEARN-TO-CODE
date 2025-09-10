@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h2>Job Application Form</h2>
+    
+    <fieldset>
+        <legend title="thi is alegend"><strong>Applicant Details</strong></legend>
+        <label for="">Full Name:</label><br>
+        <input type="text" id="fullname" name="fullname" disabled><br><br>
+
+        <label for="">Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" required ><br>
+    </fieldset>
+    <br>
+
+    <fieldset>
+        <legend><strong>Job Preferences</strong></legend>
+        <label for="">Position Applied For:</label><br>
+        <select id="position" name="position">
+            <option value="web-developer" disabled>Web Developer</option>
+            <option value="designer" selected>Designer</option>
+            <option value="tester">Tester</option>
+        </select><br><br>
+
+        <label>Preferred Location:</label><br>
+        <input type="radio" id="remote" name="location" value="remote">
+        <label for="remote">Remote</label><br>
+        <input type="radio" id="onsite" name="location" value="onsite">
+        <label for="onsite">Onsite</label><br>
+    </fieldset>
+    <br>
+
+    <fieldset>
+        <legend><strong>Additional Information</strong></legend>
+        <label for="-date">Available Start Date:</label><br>
+        <input type="date" id="start-date" name="start-date"><br><br>
+
+        <label for="">Preferred Time for Interview:</label><br>
+        <input type="time" id="interview-time" name="interview-time"><br><br>
+
+        <label>Skills:</label><br>
+        <input type="checkbox" id="html" name="skills" value="HTML">
+        <label for="">HTML</label><br>
+
+        <input type="checkbox" id="css" name="skills" value="CSS">
+        <label for="">CSS</label><br>
+
+        <input type="checkbox" id="js" name="skills" value="JavaScript">
+        <label for="">JavaScript</label><br>
+
+        <input type="checkbox" id="react" name="skills" value="React">
+        <label for="react">React</label><br>
+    </fieldset>
+    <br>
+
+    <fieldset>
+        <legend><strong>Resume Upload</strong></legend>
+        <label for="resume">Upload your resume:</label><br>
+        <input type="file" id="resume" name="resume"><br>
+    </fieldset>
+    <br>
+
+    
+    <input type="submit" value="submit application">
+</body>
+</html>
